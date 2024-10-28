@@ -1,0 +1,479 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: "Josefin Sans", sans-serif;
+}
+button{
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+/* Navbar */
+.logoimg{
+    width: 60px;
+    margin-right: 10px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.navbar {
+    top: 0px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+    background-color: #004c99;
+    color: white;
+    z-index: 3;
+}
+
+.navbar .logo {
+    font-size: 1.3rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+.main-section {
+    margin-top: 80px;
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    animation: carousel 15s infinite;
+}
+
+.carousel-image {
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .main-content button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        border-radius: 20px;
+        width: 40%;
+        border: none;
+        font-size: 1.2rem;
+    }
+    .main-content-btn:hover{
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+    }
+
+    .main-content h2 {
+        text-shadow: 2px 2px 4px #000000;
+    }
+    .main-content p {
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+
+
+@keyframes carousel {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* About Section */
+
+.about-us {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+}
+
+.about-summary {
+    margin-bottom: 10px; /* Spacing */
+    padding-left:50px;
+    padding-right: 50px;
+    padding-bottom: 0px;
+}
+
+.read-more {
+    color: #007bff; /* Link color */
+    cursor: pointer; /* Pointer cursor for the link */
+}
+
+.about-full {
+    padding-top: 0px;
+    padding-left:50px;
+    padding-right: 50px;
+    margin-top: 15px; /* Spacing above full content */
+    
+}
+
+.about-section, .services-section, .stats-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+/* Services Section */
+.services-section ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services-section ul li {
+    padding: 10px;
+    background-color: #004c99;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 50px 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+.reviews-carousel {
+    display: flex;
+    overflow: visible;
+    width: 100%;
+    height: 100px;
+}
+
+.reviews-carousel .review-item {
+    min-width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Animation for Carousel with 5-second pause on each review */
+@keyframes reviewCarousel {
+    0%, 10% { transform: translateX(0); }
+    20%, 30% { transform: translateX(-100%); }
+    40%, 50% { transform: translateX(-200%); }
+    60%, 70% { transform: translateX(-300%); }
+    80%, 90% { transform: translateX(-400%); }
+    100% { transform: translateX(-500%); }
+}
+
+.reviews-carousel {
+    display: flex;
+    animation: reviewCarousel 30s ease infinite;
+}
+
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.stat-item {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 20px;
+    background-color: #004c99;
+    color: white;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-section form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 10px;
+    color: white;
+    background-color: #004c99;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #003366;
+}
+
+
+/* additional */
+.btn-burger{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+}
+
+
+/* Disable body scroll when menu is open */
+.no-scroll {
+    overflow: hidden;
+}
+.btn-x-mark{
+    display: none;
+}
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the content */
+}
+
+.footer-logo img {
+    max-width: 150px; /* Limit logo size */
+    margin-bottom: 10px; /* Spacing below logo */
+}
+
+.footer-info {
+    margin-bottom: 15px; /* Spacing below info */
+    text-align: left;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px; /* Spacing between social icons */
+}
+
+.social-icon {
+    color: #fff; /* White icons */
+    font-size: 24px; /* Size of icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color change */
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Change color on hover */
+}
+.footer-t{
+    display: flex;
+    gap: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+    .navbar{
+        flex-direction: row;
+    }
+    .nav-links{
+        display: none;
+    }
+    .btn-burger{
+        display: block;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .main-section {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .main-content h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Stats Grid Adjustments */
+    
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    /* Services Section */
+    .services-section ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* About, Reviews, and Stats Sections */
+    .about-section, .services-section, .reviews-section, .stats-section {
+        padding: 30px 10px;
+    }
+
+    /* Contact Form Adjustments */
+    .contact-section {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar{
+        flex-direction: row;
+        z-index: 3;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: #003366;
+        height: 100vh;
+        top: 0px;
+        right: 0px;
+        width: 80%;
+
+        justify-content: center;
+        gap: 40px;
+        padding-left: 40px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .nav-links {
+        transform: translateX(100%); /* Initially hide the menu off-screen */
+        transition: transform 0.3s ease; /* Transition for sliding effect */
+    }
+    
+    /* When the menu is active */
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0); /* Slide into view */
+    }
+    .nav-link-a{
+        font-size: 1.5rem;
+    }
+    .btn-burger{
+        display: block;
+    }
+    .btn-x-mark{
+        display: block;
+        background-color: rgba(0,0,0,0);
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 25px;
+    }
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .stat-item{
+        width: 100%;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .main-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .main-content p {
+        font-size: 0.9rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .review-item {
+        font-size: 0.9rem;
+    }
+}

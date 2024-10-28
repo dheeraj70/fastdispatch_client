@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Despatch Logistics</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7ebdac75d5.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        
+        <h1 class="logo"><img class="logoimg" src="images/logo.svg" alt="">Fast Despatch Logistics</h1>
+        <ul class="nav-links">
+            <li><a class="nav-link-a" href="#home">Home</a></li>
+            <li><a class="nav-link-a" href="#about">About Us</a></li>
+            <li><a class="nav-link-a" href="#services">Services</a></li>
+            <li><a class="nav-link-a" href="#reviews">Reviews</a></li>
+            <li><a class="nav-link-a" href="#stats">Stats</a></li>
+            <li><a class="nav-link-a" href="#contact">Contact</a></li>
+            <button class="btn-x-mark"><i class="fa-solid fa-xmark"></i></button>
+
+        </ul>
+        <button class="btn-burger"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+
+    <!-- Main Section with Background Carousel -->
+    <section id="home" class="main-section">
+        <div class="carousel">
+            <div class="carousel-image" style="background-image: url('images/caro1.jpg');"></div>
+            <div class="carousel-image" style="background-image: url('images/caro2.jpg');"></div>
+            <div class="carousel-image" style="background-image: url('images/caro3.jpg');"></div>
+        </div>
+        <div class="main-content">
+            <h2>Reliable and Efficient Logistics Solutions</h2>
+            <p>Your trusted partner in fast and secure deliveries.</p>
+            <button class="main-content-btn" onclick="scrollToSection('contact')">Get in Touch</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2 style="margin-bottom: 20px;">About Us</h2>
+        <div class="about-summary">
+            <p>
+                At Fast Despatch Logistics, we are committed to providing efficient and reliable logistics solutions tailored to meet the unique needs of our clients. Our experienced team is dedicated to ensuring your shipments arrive on time and in perfect condition.
+                <p id="readmore" class="read-more" onclick="toggleAbout()">Read More</p>
+            </p>
+        </div>
+        <div class="about-full" id="full-about" style="display: none;">
+            <p>
+                Established with a vision to revolutionize the logistics industry, we have grown to become a trusted partner for businesses of all sizes. Our services include warehousing, transportation, and inventory management, all designed to streamline your supply chain.
+                We leverage advanced technology and best practices to optimize operations, ensuring maximum efficiency and cost-effectiveness. Our commitment to customer satisfaction drives us to exceed expectations, making us a preferred choice for logistics services.
+                With a focus on sustainability, we also implement eco-friendly practices throughout our operations. We believe in building long-lasting relationships with our clients based on trust, transparency, and exceptional service. At Fast Despatch Logistics, we don’t just deliver goods; we deliver peace of mind.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 style="margin-bottom: 20px;">Our Services</h2>
+        <ul>
+            <li>Same-Day Delivery</li>
+            <li>International Shipping</li>
+            <li>Warehouse Management</li>
+            <li>Supply Chain Solutions</li>
+        </ul>
+    </section>
+
+    <!-- Reviews Section with Carousel -->
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-carousel">
+            <div class="review-item">"Fast and reliable service, highly recommended!" - Jane D.</div>
+            <div class="review-item">"Their logistics management is outstanding!" - John M.</div>
+            <div class="review-item">"Excellent customer support and timely delivery." - Sarah L.</div>
+            <!-- Duplicate items for seamless looping -->
+            <div class="review-item">"Fast and reliable service, highly recommended!" - Jane D.</div>
+            <div class="review-item">"Their logistics management is outstanding!" - John M.</div>
+            <div class="review-item">"Excellent customer support and timely delivery." - Sarah L.</div>
+        </div>
+    </section>
+    
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <h2 style="margin-bottom: 40px;">Our Achievements</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>98%</h3>
+                <p>Success Rate</p>
+            </div>
+            <div class="stat-item">
+                <h3>5,000+</h3>
+                <p>Deliveries Per Day</p>
+            </div>
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Countries Served</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-section">
+        <h2 style="margin-bottom: 20px;">Contact Us</h2>
+        <form id="contact-form" onsubmit="submitForm(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-t">
+             <div class="footer-logo">
+                <img style="width: 100px;" src="images/logo.svg" alt="Company Logo" />
+            </div>
+            <div class="footer-info">
+                <p class="address">Address:</p>
+                <p class="address">1234 Fast Despatch Lane<br />City, State, ZIP</p>
+                <p class="phone">Phone: (123) 456-7890</p>
+            </div>   
+            </div>
+            
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
